@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #00C4D0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
+
+.container {
+    background-color: #000;
+    width: 300px;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.data-selector {
+    font-size: 12px;
+}
+
+.menu {
+    margin-top: 10px;
+    font-size: 12px;
+    border-top: 1px solid #fff;
+    padding-top: 5px;
+}
+
+.model-section {
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.model-section div .facility{
+    font-size:18px;
+    font-weight:600;
+   }
+
+.model-information {
+    margin: 8px 0;
+    opacity: 0.7;
+}
+
+.crystal-image {
+    width: 100%;
+    border-color:#00C4D0;
+    border-style:solid;
+    border-top-style:solid;
+    border-top-width:0px;
+    border-width:2px;
+}
+
+.info-section {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.carat {
+    width:50%;
+}
+
+.reserve {
+    width:50%;
+    transform:translatex(158px) translatey(-49px);
+}
+
+.mine-scale {
+    width:50%;
+    transform:translatex(0px) translatey(-44px);
+}
+
+.info-title {
+    margin: 8px 0;
+    opacity: 0.7;
+}
+
+.mine-image {
+    width: 100%;
+    margin-top: 10px;
+    border-color:#00C4D0;
+    border-style:solid;
+    border-top-style:solid;
+    border-top-width:0px;
+    border-width:2px;
+}
+
+.footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info, .preview-download {
+    padding: 5px 10px;
+}
