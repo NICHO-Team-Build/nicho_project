@@ -1,23 +1,21 @@
-import React from "react";
-import "../styles/NavBar.css";
+import { Link, useLocation } from 'react-router-dom';
+import '../styles/NavBar.css';
 
-export default function NavBar() {
+function NavBar() {
+    const location = useLocation();
+    const isActive = (path) => location.pathname === path;
+
     return (
-        <nav className="navbar">
-            <ul className="navbar-list">
-                <li className="navbar-item">
-                    <a href="/">OVERVIEW</a>
-                </li>
-                <li className="navbar-item">
-                    <a href="/">BUYERS</a>
-                </li>
-                <li className="navbar-item">
-                    <a href="/">PREVIEW</a>
-                </li>
-                <li className="navbar-item">
-                    <a href="/">DOWNLOAD</a>
-                </li>
-            </ul>
-        </nav>
+        <div className="navbar">
+            <Link to="/overview" className={isActive('/overview') ? 'active' : ''}>OVERVIEW</Link>
+            <span>/</span>
+            <Link to="/" className={isActive('/') ? 'active' : ''}>BUYERS</Link>
+            <span>/</span>
+            <Link to="/preview" className={isActive('/preview') ? 'active' : ''}>PREVIEW</Link>
+            <span>/</span>
+            <Link to="/download" className={isActive('/download') ? 'active' : ''}>DOWNLOAD</Link>
+        </div>
     );
 }
+
+export default NavBar;
