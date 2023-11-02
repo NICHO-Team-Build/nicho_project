@@ -1,11 +1,15 @@
+.header{
+    text-align: center;
+    /* position: sticky; */
+    top: 0;
+    z-index: 10;
+}
+
 .navbar {
     font-size: 12px;
     list-style-type: none;
     display: flex;
     justify-content: center;
-    position: sticky;
-    top: 10;
-    z-index: 10;
     padding: 10px;
 }
 
@@ -24,4 +28,51 @@
 .navbar a.active {
     opacity: 1;
     font-weight: 600;
+}
+
+.company-container {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.company-section {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 5px;
+}
+
+.company-text > div:first-child {
+    font-size: 14px;
+}
+
+.company-text > div:last-child {
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text",
+        "Times New Roman", serif;
+    font-weight: 600;
+}
+
+.data-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal,
+        "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black",
+        "sans serif";
+}
+
+.data-subtext {
+    opacity: 0.7;
+    font-size: 12px;
 }

@@ -6,7 +6,7 @@ import NavBar from "./NavBar";
 import "../styles/mineInformation.css";
 import MineInformation1 from "../assets/MineInformation1.png";
 import MineInformation2 from "../assets/MineInformation2.png";
-import logo from "../assets/logo.png";
+import companyIcon from "../assets/CompanyIcon.png";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const MineInformation = () => {
@@ -19,13 +19,6 @@ const MineInformation = () => {
         mineScale: "Medium-Sized Mine",
         method: "Open-Pit Mining",
         equipment: "Diamond Drilling Rigs And Blasting Equipment",
-    });
-
-    const [company, setCompany] = useState({
-        logo: "",
-        name: "Opal",
-        fullName: "Opal Oasis",
-        data: "01",
     });
 
     // useEffect(() => {
@@ -74,23 +67,6 @@ const MineInformation = () => {
 
     return (
         <div className="container">
-            <div className="company-container">
-                <div className="company-section">
-                    <div
-                        className="company-logo"
-                        style={{ backgroundImage: `url(${logo})` }}
-                    ></div>
-                    <div className="company-text">
-                        <div>{company.name}</div>
-                        <div>{company.fullName}</div>
-                    </div>
-                </div>
-
-                <div className="data-section">
-                    <div>DATA #{company.data}</div>
-                    <div className="data-subtext">SELECT BY LEFT</div>
-                </div>
-            </div>
             <NavBar />
             <div id="info-container">
                 <div className="model-section">
@@ -99,18 +75,16 @@ const MineInformation = () => {
                         style={{ backgroundImage: `url(${MineInformation1})` }}
                     >
                         <div className="model-info">
-                            <div className="mine-name">
-                                <div>{mine.name}</div>
-                            </div>
-                            <div className="mine-location">
+                            <div className="horizontal-container">
+                                <div className="mine-name">{mine.name}</div>
                                 <div>
-                                    <LocationOnIcon />
-                                    {mine.location}
+                                    <div className="mine-location">
+                                        <LocationOnIcon />
+                                        {mine.location}
+                                    </div>
                                 </div>
                             </div>
-                            <div className="mine-facility">
-                                <div>{mine.facility}</div>
-                            </div>
+                            <div className="mine-facility">{mine.facility}</div>
                         </div>
                     </div>
                 </div>
@@ -154,6 +128,7 @@ const MineInformation = () => {
                 <button className="download" onClick={printDocument}>
                     DOWNLOAD
                 </button>
+                <div style={{ backgroundImage: `url(${companyIcon})` }}></div>
             </div>
         </div>
     );
